@@ -778,8 +778,8 @@ section {
     height: 60px;
     z-index: 1;
     content: "";
-    border-left: 5px solid #cda45e;
-    border-top: 5px solid #cda45e;
+    border-left: 5px solid #555;
+    border-top: 5px solid #555;
     transition: 0.5s;
 }
 
@@ -791,8 +791,8 @@ section {
     height: 60px;
     z-index: 2;
     content: "";
-    border-right: 5px solid #cda45e;
-    border-bottom: 5px solid #cda45e;
+    border-right: 5px solid #555;
+    border-bottom: 5px solid #555;
     transition: 0.5s;
 }
 
@@ -848,6 +848,7 @@ section {
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
     transition: all ease-in-out 0.3s;
     background: #1a1814;
+    transition-duration: 0.5s !important;
 }
 
 .why-us .box span {
