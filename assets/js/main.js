@@ -1,9 +1,3 @@
-/**
- * Template Name: Restaurantly - v1.2.0
- * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
- * Author: BootstrapMade.com
- * License: https://bootstrapmade.com/license/
- */
 !(function ($) {
     "use strict";
 
@@ -178,51 +172,6 @@
             "easeInOutExpo"
         );
         return false;
-    });
-
-    // Menu list isotope and filter
-    $(window).on("load", function () {
-        var menuIsotope = $(".menu-container").isotope({
-            itemSelector: ".menu-item",
-            layoutMode: "fitRows",
-        });
-
-        $("#menu-flters li").on("click", function () {
-            $("#menu-flters li").removeClass("filter-active");
-            $(this).addClass("filter-active");
-
-            menuIsotope.isotope({
-                filter: $(this).data("filter"),
-            });
-            aos_init();
-        });
-    });
-
-    // Events carousel (uses the Owl Carousel library)
-    $(".events-carousel").owlCarousel({
-        autoplay: true,
-        dots: true,
-        loop: true,
-        items: 1,
-    });
-
-    // Testimonials carousel (uses the Owl Carousel library)
-    $(".testimonials-carousel").owlCarousel({
-        autoplay: true,
-        dots: true,
-        loop: true,
-        autoplayTimeout: 6000,
-        responsive: {
-            0: {
-                items: 1,
-            },
-            768: {
-                items: 2,
-            },
-            900: {
-                items: 3,
-            },
-        },
     });
 
     // Initiate venobox lightbox
