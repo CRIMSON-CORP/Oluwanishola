@@ -240,4 +240,20 @@
     $(window).on("load", function () {
         aos_init();
     });
+
+    // Email Scripting
+    emailjs.init("user_gjLow8UpRGcn0XypOuCJX");
+    const form = document.getElementById("contactForm");
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        emailjs
+            .sendForm("oluwanishola", "template_01in8pj", e.target)
+            .then(() => {
+                alert("Your message has been sent!");
+                form.reset();
+            })
+            .catch(() => {
+                alert("An error Occured!, Please try again.");
+            });
+    });
 })(jQuery);

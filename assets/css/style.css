@@ -1786,3 +1786,96 @@ section {
     font-size: 13px;
     color: #fff;
 }
+
+.contactModal .modal-content {
+    display: block;
+    border-radius: 0px;
+    background: #0c0b09;
+    border: none;
+    outline: none;
+    overflow-y: auto;
+}
+
+.contactModal .modal-content::-webkit-scrollbar {
+    width: 8px;
+    background-color: #0c0b09;
+}
+.contactModal .modal-content::-webkit-scrollbar-thumb {
+    width: 8px;
+    background-color: #cda45e;
+}
+
+.modal-dialog {
+    max-width: 800px;
+}
+
+.social-links li {
+    display: flex;
+    gap: 20px;
+}
+
+.contactModal ul li {
+    margin-bottom: 20px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    z-index: 1;
+}
+.contactModal ul li a {
+    font-size: 40px;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.contactModal ul li.whatsapp a {
+    color: #25d366;
+    position: relative;
+}
+
+.contactModal ul li.whatsapp a::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: white;
+    z-index: -1;
+}
+
+.contactModal ul li.gmail a {
+    color: #dd4b39;
+}
+.contactModal ul li.twitter a {
+    color: #55acee;
+}
+.contactModal ul li.facebook a {
+    color: #3b5999;
+}
+.contactModal ul li.instagram a {
+    color: #e4405f;
+}
+
+.closeModal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.2rem;
+    background: #625b4b;
+    border: none;
+}
+
+@media (max-width: 767px) {
+    .modal-content .col-md-8 {
+        padding-top: 0 !important;
+    }
+    .modal-content .col-md-4 {
+        padding-bottom: 0 !important;
+    }
+    .modal-content .col-md-4 ul {
+        margin: 25px 0 !important;
+    }
+    .modal-content .col-md-4 ul li {
+        margin: 0 !important;
+    }
+}

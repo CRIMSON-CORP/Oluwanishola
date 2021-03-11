@@ -70,12 +70,11 @@
                             <div
                                 class="btn-menu animated fadeInUp"
                                 data-toggle="modal"
-                                data-target="contactModal"
+                                data-target="#contactModal"
                             >
                                 Get your Towel!
                             </div>
                         </div>
-                        <div id="contactModal" class="modal"></div>
                     </div>
                 </div>
             </div>
@@ -432,7 +431,7 @@
                                 />
                                 <div class="member-info">
                                     <div class="member-info-content">
-                                        <h4>Walter White</h4>
+                                        <h4>Giwa Ramota</h4>
                                         <span>C.E.O</span>
                                     </div>
                                     <div class="social">
@@ -548,12 +547,7 @@
                         </div>
 
                         <div class="col-lg-8 mt-5 mt-lg-0">
-                            <form
-                                action="forms/contact.php"
-                                method="post"
-                                role="form"
-                                class="php-email-form"
-                            >
+                            <form role="form" class="php-email-form" id="contactForm">
                                 <div class="form-row">
                                     <div class="col-md-6 form-group">
                                         <input
@@ -564,8 +558,8 @@
                                             placeholder="Your Name"
                                             data-rule="minlen:4"
                                             data-msg="Please enter at least 4 chars"
+                                            required
                                         />
-                                        <div class="validate"></div>
                                     </div>
                                     <div class="col-md-6 form-group">
                                         <input
@@ -576,8 +570,8 @@
                                             placeholder="Your Email"
                                             data-rule="email"
                                             data-msg="Please enter a valid email"
+                                            required
                                         />
-                                        <div class="validate"></div>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -589,8 +583,8 @@
                                         placeholder="Subject"
                                         data-rule="minlen:4"
                                         data-msg="Please enter at least 8 chars of subject"
+                                        required
                                     />
-                                    <div class="validate"></div>
                                 </div>
                                 <div class="form-group">
                                     <textarea
@@ -600,15 +594,8 @@
                                         data-rule="required"
                                         data-msg="Please write something for us"
                                         placeholder="Message"
+                                        required
                                     ></textarea>
-                                    <div class="validate"></div>
-                                </div>
-                                <div class="mb-3">
-                                    <div class="loading">Loading</div>
-                                    <div class="error-message"></div>
-                                    <div class="sent-message">
-                                        Your message has been sent. Thank you!
-                                    </div>
                                 </div>
                                 <div class="text-center">
                                     <button type="submit">Send Message</button>
@@ -697,6 +684,118 @@
         <div id="preloader"></div>
         <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
 
+        <!-- Modal -->
+        <div id="contactModal" class="modal fade contactModal">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 p-4">
+                                <h4>Reach us through variuos means!</h4>
+                                <ul
+                                    class="d-flex flex-md-column justify-content-around justify-content-md-center align-items-md-center mt-md-4 mt-2 list-unstyled scocial-links"
+                                >
+                                    <li class="whatsapp">
+                                        <a href="https://wa.link/5rldqp"
+                                            ><i class="icofont-whatsapp"></i
+                                        ></a>
+                                    </li>
+                                    <li class="gmail">
+                                        <a href="mailto:oluwanishola@gmail.com"
+                                            ><i class="icofont-envelope"></i
+                                        ></a>
+                                    </li>
+                                    <li class="twitter">
+                                        <a href="https://twitter.com/heyzedunique" target="_blank"
+                                            ><i class="icofont-twitter"></i
+                                        ></a>
+                                    </li>
+                                    <li class="facebook">
+                                        <a
+                                            href="https://www.facebook.com/azeez.sanni2"
+                                            target="_blank"
+                                            ><i class="icofont-facebook"></i
+                                        ></a>
+                                    </li>
+                                    <li class="instagram">
+                                        <a
+                                            href="https://www.instagram.com/heyzedmoney"
+                                            target="_blank"
+                                            ><i class="icofont-instagram"></i
+                                        ></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-8 p-4">
+                                <h4>Or Send us a Message, we'll be happy to hear from you!</h4>
+                                <div class="contact mt-4">
+                                    <form role="form" class="php-email-form" id="contactForm">
+                                        <div class="form-row">
+                                            <div class="col-md-6 form-group">
+                                                <input
+                                                    type="text"
+                                                    name="name"
+                                                    class="form-control"
+                                                    id="name"
+                                                    placeholder="Your Name"
+                                                    data-rule="minlen:4"
+                                                    data-msg="Please enter at least 4 chars"
+                                                    required
+                                                />
+                                            </div>
+                                            <div class="col-md-6 form-group">
+                                                <input
+                                                    type="email"
+                                                    class="form-control"
+                                                    name="email"
+                                                    id="email"
+                                                    placeholder="Your Email"
+                                                    data-rule="email"
+                                                    data-msg="Please enter a valid email"
+                                                    required
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                name="subject"
+                                                id="subject"
+                                                placeholder="Subject"
+                                                data-rule="minlen:4"
+                                                data-msg="Please enter at least 8 chars of subject"
+                                                required
+                                            />
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea
+                                                class="form-control"
+                                                name="message"
+                                                rows="8"
+                                                data-rule="required"
+                                                data-msg="Please write something for us"
+                                                placeholder="Message"
+                                                required
+                                            ></textarea>
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="submit" class="contactFormSubmit">
+                                                Send Message
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="closeModal btn btn-danger" type="button" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+            </div>
+        </div>
+
         <!-- Vendor JS Files -->
         <script src="assets/vendor/jquery/jquery.min.js"></script>
         <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -706,7 +805,10 @@
         <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
         <script src="assets/vendor/venobox/venobox.min.js"></script>
         <script src="assets/vendor/aos/aos.js"></script>
-
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+        ></script>
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
     </body>
