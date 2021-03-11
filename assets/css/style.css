@@ -1872,3 +1872,7 @@ section {
         margin: 0 !important;
     }
 }
+
+#header .logo span:first-child {
+    color: #cda45e;
+}
